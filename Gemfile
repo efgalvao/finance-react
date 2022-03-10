@@ -13,7 +13,7 @@ gem "rails", "~> 7.0.0"
 gem "puma", "~> 5.0"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
+# gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -30,7 +30,6 @@ gem 'pundit'
 gem 'dotenv-rails'
 gem 'pg'
 gem 'rest-client'
-gem 'solargraph'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -47,43 +46,9 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem 'factory_bot_rails', '~> 4.0'
-  gem 'pry-byebug'
-  gem 'pry-rails'
-  gem 'rspec-rails', '~> 5.0'
-  gem 'shoulda-matchers'
-  gem 'rails-erd' # Visualize the database structure with `bundle exec erd --open`
 end
 
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-  gem 'better_errors'
-  gem 'binding_of_caller'
-
-      # Security, lint and optimization
-  gem 'brakeman', require: false
-  gem 'bullet'
-  gem 'bundler-audit', require: false
-  gem 'rails_best_practices', require: false
-  gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rspec', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubycritic', require: false
-  gem 'scss_lint', require: false
 end
-
-group :test do
-  # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 3.26'
-  gem 'selenium-webdriver'
-  # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
-  gem 'simplecov', '~> 0.11', require: false
-  gem 'faker'
-  gem 'rspec_junit_formatter'
-end
-
-# ActiveAdmin
-gem 'activeadmin'
