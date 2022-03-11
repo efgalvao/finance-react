@@ -25,7 +25,6 @@ gem "puma", "~> 5.0"
 # gem "bcrypt", "~> 3.1.7"
 
 gem 'money-rails', '~>1.12'
-gem 'devise'
 gem 'pundit'
 gem 'dotenv-rails'
 gem 'pg'

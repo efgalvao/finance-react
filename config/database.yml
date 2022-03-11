@@ -9,13 +9,13 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV['DB_DATABASE'] || 'finance_dev' %>
+  database: <%= ENV['DB_DATABASE'] || 'finance_react_dev' %>
 
 test:
   <<: *default
-  database: <%= ENV['DB_DATABASE'] || 'finance_test' %>
+  database: <%= ENV['DB_DATABASE'] || 'finance_react_test' %>
 
 production:
   <<: *default
-  database: <%= ENV['DB_DATABASE'] || 'finance_production' %>
+  database: <%= ENV['DB_DATABASE'] || 'finance_react_production' %>
   pool: 10
