@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Accounts from './Accounts'
-import NotFound from './Not'
-import Home from './Home'
+import Navbar from './components/Navbar'
+import Accounts from './pages/Accounts'
+import NotFound from './pages/NotFound'
+import Home from './pages/Home'
 
 class App extends Component {
   render () {
     return <Router>
+      <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/accounts' element={<Accounts />} />
