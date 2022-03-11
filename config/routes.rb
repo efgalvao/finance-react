@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   scope '/api' do
     resources :users, only: [:index, :create, :show]
     resources :accounts, only: [:index, :show]
+    resources :categories, only: [:index, :show]
     # Defines the root path route ("/")
     # root "articles#index"
   end

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 // TODO: Update <Search> usage after its will be implemented
 
 
-const MenuExampleAttached = () => (
+const Navbar = () => (
   <div>
     <Menu attached='top'>
       <Dropdown item icon='unordered list' simple>
@@ -13,7 +13,7 @@ const MenuExampleAttached = () => (
         <Dropdown.Item as={ Link } name='home' to='/'>Home</Dropdown.Item>
           <Dropdown.Item as={ Link } name='accounts' to='accounts'>Accounts</Dropdown.Item>
           <Dropdown.Item>Balances</Dropdown.Item>
-          <Dropdown.Item>Categories...</Dropdown.Item>
+          <Dropdown.Item  as={ Link } name='categories' to='categories'>Categories</Dropdown.Item>
           <Dropdown.Item>Dividends</Dropdown.Item>
           <Dropdown.Divider />
           <Dropdown.Header>Setup</Dropdown.Header>
@@ -42,4 +42,4 @@ const MenuExampleAttached = () => (
   </div>
 )
 
-export default MenuExampleAttached
+export default Navbar
