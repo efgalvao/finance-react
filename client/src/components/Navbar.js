@@ -19,7 +19,7 @@ const Navbar = () => (
           <Dropdown.Item  as={ Link } name='dividends' to='dividends'>Dividends</Dropdown.Item>
           <Dropdown.Item  as={ Link } name='transactions' to='transactions'>Transactions</Dropdown.Item>
           <Dropdown.Item  as={ Link } name='transferences' to='transferences'>Transferences</Dropdown.Item>
-
+          <Dropdown.Item  as={ Link } name='prices' to='prices'>Prices</Dropdown.Item>
           <Dropdown.Divider />
           <Dropdown.Header>Setup</Dropdown.Header>
           <Dropdown.Item>Preferences</Dropdown.Item>
