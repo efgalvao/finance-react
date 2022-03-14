@@ -62,7 +62,7 @@ class Stock < ApplicationRecord
     grouped_dividends = {}
     last_semester_dividends.each do |dividend|
       grouped_dividends[dividend.date.strftime('%B/%Y').to_s] =
-        dividend.value.to_f * shares.where('aquisition_date <= ?', dividend.date).count
+        dividend.value.to_f * shares.where('date <= ?', dividend.date).count
     end
     grouped_dividends
   end
