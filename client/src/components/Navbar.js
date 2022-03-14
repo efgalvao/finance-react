@@ -15,6 +15,7 @@ const Navbar = () => (
           <Dropdown.Item as={ Link } name='balances' to='balances'>Balances</Dropdown.Item>
           <Dropdown.Item  as={ Link } name='categories' to='categories'>Categories</Dropdown.Item>
           <Dropdown.Item>Dividends</Dropdown.Item>
+          <Dropdown.Item  as={ Link } name='transactions' to='transactions'>Transactions</Dropdown.Item>
           <Dropdown.Divider />
           <Dropdown.Header>Setup</Dropdown.Header>
           <Dropdown.Item>Preferences</Dropdown.Item>
