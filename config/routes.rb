@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :balances, only: [:index, :show]
     resources :transactions, only: [:index, :show]
     resources :transferences, only: [:index, :show]
+    resources :stocks, only: [:index, :show]
     # Defines the root path route ("/")
     # root "articles#index"
   end
