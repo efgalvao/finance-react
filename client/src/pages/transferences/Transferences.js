@@ -2,15 +2,15 @@ import React, { Component } from 'react'
 import { Container, Header, Icon, Dimmer, Loader } from 'semantic-ui-react'
 import { Table } from 'semantic-ui-react'
 
-class Transactions extends Component {
+class Transferences extends Component {
   constructor () {
     super()
     this.state = {}
-    this.getTransactions = this.getTransactions.bind(this)
-    this.getTransaction = this.getTransaction.bind(this)
+    this.getTransferences = this.getTransferences.bind(this)
+    this.getTransference = this.getTransference.bind(this)
   }
   componentDidMount () {
-    this.getTransactions()
+    this.getTransferences()
   }
   fetch (endpoint) {
     return new Promise((resolve, reject) => {
@@ -20,25 +20,25 @@ class Transactions extends Component {
       .catch(error => reject(error))
     })
   }
-  getTransactions () {
-    this.fetch('api/transactions')
-      .then(transactions => {
-        this.setState({transactions: transactions})
-        transactions[0] && this.getTransaction(transactions[0].id)
+  getTransferences () {
+    this.fetch('api/transferences')
+      .then(transferences => {
+        this.setState({transferences: transferences})
+        transferences[0] && this.getTransference(transferences[0].id)
       })
   }
-  getTransaction (id) {
-    this.fetch(`api/transactions/${id}`)
-      .then(transaction => this.setState({transaction: transaction}))
+  getTransference (id) {
+    this.fetch(`api/transferences/${id}`)
+      .then(transference => this.setState({transference: transference}))
   }
   render () {
-    let {transactions, transaction} = this.state
-    return transactions
+    let {transferences, transference} = this.state
+    return transferences
     ? <Container text>
         <Header as='h2' icon textAlign='center'>
         <Icon name='list layout' circular color="red"/>
         <Header.Content>
-          List of transactions
+          List of transferences
         </Header.Content>
       </Header>
       <Table celled selectable>
@@ -54,9 +54,9 @@ class Transactions extends Component {
     </Table.Header>
 
     <Table.Body>
-        {transactions.map((transaction) => (
-          <Table.Row key={transaction.id}>
-          <Table.Cell content={transaction.date}></Table.Cell>
+        {transferences.map((transference) => (
+          <Table.Row key={transference.id}>
+          <Table.Cell content={transference.date}></Table.Cell>
       </Table.Row>
         ))}
     </Table.Body>
@@ -69,4 +69,4 @@ class Transactions extends Component {
 
 }
 
-export default Transactions
+export default Transferences

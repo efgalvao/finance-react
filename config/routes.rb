@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :categories, only: [:index, :show]
     resources :balances, only: [:index, :show]
     resources :transactions, only: [:index, :show]
+    resources :transferences, only: [:index, :show]
     # Defines the root path route ("/")
     # root "articles#index"
   end

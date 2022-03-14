@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Container, Header, Icon, Dimmer, Loader } from 'semantic-ui-react'
 import { Table } from 'semantic-ui-react'
 
-class balances extends Component {
+class Balances extends Component {
   constructor () {
     super()
     this.state = {}
@@ -65,4 +65,4 @@ class balances extends Component {
 
 }
 
-export default balances
+export default Balances

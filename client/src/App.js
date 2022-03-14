@@ -7,6 +7,7 @@ import Categories from './pages/categories/Categories'
 import NotFound from './pages/NotFound'
 import Home from './pages/Home'
 import Transactions from './pages/transactions/Transactions'
+import Transferences from './pages/transferences/Transferences'
 
 class App extends Component {
   render () {
@@ -18,6 +19,7 @@ class App extends Component {
         <Route path='/categories' element={<Categories />} />
         <Route path='/balances' element={<Balances />} />
         <Route path='/transactions' element={<Transactions />} />
+        <Route path='/transferences' element={<Transferences />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </Router>
