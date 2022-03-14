@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :transferences, only: [:index, :show]
     resources :stocks, only: [:index, :show]
     resources :shares, only: [:index, :show]
+    resources :dividends, only: [:index, :show]
     # Defines the root path route ("/")
     # root "articles#index"
   end

@@ -10,6 +10,8 @@ import Transactions from './pages/transactions/Transactions'
 import Transferences from './pages/transferences/Transferences'
 import Stocks from './pages/stocks/Stocks'
 import Shares from './pages/shares/Shares'
+import Dividends from './pages/dividends/Dividend'
+
 
 class App extends Component {
   render () {
@@ -24,6 +26,7 @@ class App extends Component {
         <Route path='/transferences' element={<Transferences />} />
         <Route path='/stocks' element={<Stocks />} />
         <Route path='/shares' element={<Shares />} />
+        <Route path='/dividends' element={<Dividends />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </Router>
