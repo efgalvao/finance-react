@@ -15,15 +15,17 @@
 # gem "pg"
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  adapter: <%= ENV['DB_ADAPTER'] || 'postgresql' %>
+  pool: 5
+  timeout: 5000
+  encoding: utf8
+  username: <%= ENV['DB_USERNAME'] || 'postgres' %>
+  password: "<%= ENV['DB_PASSWORD'] || 'postgres' %>"
+  host: <%= ENV['DB_HOST'] || '127.0.0.1' %>
 
 development:
   <<: *default
-  database: finance_react_development
+  database: finance_react_dev
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
