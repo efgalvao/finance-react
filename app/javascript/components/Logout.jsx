@@ -39,6 +39,10 @@ class Logout extends Component {
       .catch(error => console.log('api errors:', error))
   };
   redirect = () => {
+    console.log('this.history')
+    console.log(this.state)
+    console.log(this.history)
+
     this.props.history.push('/')
   }
   handleErrors = () => {

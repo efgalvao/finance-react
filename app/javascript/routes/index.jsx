@@ -5,9 +5,11 @@ import Login from "../components/Login";
 import Signup from "../components/Signup";
 import Logout from "../components/Logout";
 import Welcome from "../components/Welcome";
+import Navbar from '../components/Navbar'
 
 export default (
   <Router>
+    <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />

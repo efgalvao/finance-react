@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
 
 class Login extends Component {
   constructor(props) {
@@ -41,7 +42,12 @@ class Login extends Component {
   };
 
   redirect = () => {
-    window.location.href = '/welcome';
+    const history = useHistory();
+
+    console.log('this.history')
+    console.log(history)
+    history.push('/welcome');
+
   };
 
   handleErrors = () => {
